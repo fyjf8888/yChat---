@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>消息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link href="../css/all.css" rel="stylesheet">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script src="https://cdn.bootcss.com/template_js/0.7.1-1/template.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../libs/layer_mobile/layer.js"></script>
+</head>
+
+<style>
+    .layui-m-layercont { padding: 0.53rem; }
+    .layui-m-layermain:before {
+        content: '';
+        display: block;
+        background-color: #ffffff;
+        position: absolute;
+        right: 0.6rem;
+        top: -2.3rem;
+        width:0;
+        height:0;
+        border-right:0.2rem solid #4C4C4C;
+        border-left:0.2rem solid #4C4C4C;
+        border-bottom:0.2rem solid #ffffff;
+    }
+</style>
+
+<body>
+    <div id="navi_top">
+        <table id="navi_message">
+            <tr>
+                <td><img class="navi_self_icon" src="../resource/test/head_img.png"></td>
+                <td><p class="navi_center_text">消息</p></td>
+                <td><img class="navi_right_add" src="../resource/test/message_more.png"></td>
+            </tr>
+        </table>
+
+        <table id="navi_contacter" style="display: none;">
+            <tr>
+                <td><img class="navi_self_icon" src="../resource/test/head_img.png"></td>
+                <td><p class="navi_center_text">联系人</p></td>
+                <td><img class="navi_right_add" src="../resource/test/contacter_more.png"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="message_list">
+        <div class="message_item">
+            <table>
+                <tr>
+                    <td rowspan="2"><img class="message_icon" src="../resource/test/head_img.png"></td>
+                    <td><p class="message_title">产品设计和UI设计讨论</p></td>
+                    <td><p class="message_time">09:37</p></td>
+                </tr>
+                <tr>
+                    <td><p class="message_body">网络部门：原型图已经发送群里面了...</p></td>
+                    <td><p class="message_count">99+</p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="contacter_list" style="display: none;">
+        <div id="friend_group_button">
+            <div class="button_div">
+                <div id="friend_button" class="contacter_button_HL">好友</div>
+                <div id="group_button">群聊</div>
+            </div>
+        </div>
+
+        <div id="contacter_friend_list">
+            <div class="message_group" data-field="friend" data-friend_id="1">
+                <table>
+                    <tr>
+                        <td><img class="arrow" src="../resource/test/arrow_right.png"></td>
+                        <td>一个好友分组</td>
+                        <td>2/3</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="message_item" data-friend_id="1" style="display: none;">
+                <table>
+                    <tr>
+                        <td rowspan="2"><img class="message_icon" src="../resource/test/head_img.png"></td>
+                        <td><p class="message_title">产品设计和UI设计讨论</p></td>
+                        <td><p class="message_time">09:37</p></td>
+                    </tr>
+                    <tr>
+                        <td><p class="message_body">网络部门：原型图已经发送群里面了...</p></td>
+                        <td><p class="message_count">99+</p></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="message_group" data-field="friend" data-friend_id="2">
+                <table>
+                    <tr>
+                        <td><img class="arrow" src="../resource/test/arrow_right.png"></td>
+                        <td>二个好友分组</td>
+                        <td>2/3</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="message_item" data-friend_id="2" style="display: none;">
+                <table>
+                    <tr>
+                        <td rowspan="2"><img class="message_icon" src="../resource/test/head_img.png"></td>
+                        <td><p class="message_title">产品设计和UI设计讨论</p></td>
+                        <td><p class="message_time">09:37</p></td>
+                    </tr>
+                    <tr>
+                        <td><p class="message_body">网络部门：原型图已经发送群里面了...</p></td>
+                        <td><p class="message_count">99+</p></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="contacter_group_list" style="display: none;">
+
+        </div>
+    </div>
+
+    <div id="navi_bottom">
+        <div class="action_message">
+            <img src="../resource/test/message_HL.png"/>
+            <p class="navi_bottom_HL">消息</p>
+        </div>
+        <div class="action_contacter">
+            <img src="../resource/test/contacter.png"/>
+            <p>联系人</p>
+        </div>
+    </div>
+</body>
+
+<script id="tpl" type="text/html">
+    <table>
+        <caption>for循环输出两次</caption>
+        <%var test = '输出自定义变量';%>
+        <%for (var i = 0; i < 2; i++) {%>
+        <tr><td>&lt;%=html%&gt;默认</td><td><%=html%></td></tr>
+        <tr><td>&lt;%:h=html&gt;html转义</td><td><%:h=html%></td></tr>
+        <tr><td>&lt;%:=html&gt;不转义</td><td><%:=html%></td></tr>
+        <tr><td>&lt;%:u=url&gt;URI转义</td><td><%:u=url%></td></tr>
+        <tr><td>var</td><td><%:=test%></td></tr>
+        <tr><td>&lt;%=test + 1&gt;表达式</td><td><%=test + 1%></td></tr>
+        <%if (true) {%>
+        <tr><td>if</td><td>if 语句</td></tr>
+        <%}%>
+        <tr><td>分割线</td><td>------------------------------</td></tr>
+        <%}%>
+    </table>
+</script>
+
+<script id="message_more_tpl" type="text/html">
+    <table id="message_more">
+        <tr class="create_group">
+            <td><img src="../resource/test/create_group.png"/></td>
+            <td>创建群聊</td>
+        </tr>
+        <tr class="add_friend_group">
+            <td><img src="../resource/test/add_friend_group.png"/></td>
+            <td>加好友/群</td>
+        </tr>
+    </table>
+</script>
+<script src="../js/message.js"></script>
+

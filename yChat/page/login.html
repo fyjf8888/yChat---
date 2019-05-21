@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link href="../css/all.css" rel="stylesheet">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script src="https://cdn.bootcss.com/template_js/0.7.1-1/template.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div id="login">
+    <table class="welcome" style="width: auto;">
+        <tr>
+            <td><img class="icon" src="../resource/test/icon.png"></td>
+            <td><span class="text">欢迎来到雨聊</span></td>
+        </tr>
+    </table>
+    <div id="div_l_name">
+        <div id="l_name">
+            <table>
+                <tr>
+                    <td WIDTH="30%"><label for="i_name">账号：</label></td>
+                    <td WIDTH="70%"><input id="i_name" class="name" type="text" name="name" /></td>
+                </tr>
+            </table>
+        </div>
+        <div id="l_pswd">
+            <table>
+                <tr>
+                    <td WIDTH="30%"><label for="i_pswd">密码：</label></td>
+                    <td WIDTH="70%"><input id="i_pswd" class="pswd" type="text" name="pswd" /></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="div_l_mobile" style="display: none;">
+        <div id="l_mobile">
+            <table>
+                <tr>
+                    <td WIDTH="100%"><input class="mobile" type="text" name="mobile" placeholder="输入手机号" /></td>
+                </tr>
+            </table>
+        </div>
+        <div id="l_mobile_code">
+            <table>
+                <tr>
+                    <td WIDTH="70%"><input class="mobile_code" type="text" name="mobile_code" placeholder="输入手机验证码" /></td>
+                    <td WIDTH="30%"><div class="button_action action_code">获取验证码</div></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="action">
+    <div class="click_action mobile_login">手机号登录</div>
+    <div class="click_action pswd_login" style="display: none;">密码登录</div>
+    <div class="button_action login_action">登录</div>
+    <div class="other_action">
+        <a class="click_action forget_pswd">忘记密码</a>
+        <a class="click_action new_add_user" href="regis.html">新用户注册</a>
+    </div>
+</div>
+
+</body>
+
+<script src="../js/login.js"></script>

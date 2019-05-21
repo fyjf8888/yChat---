@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link href="../css/all.css" rel="stylesheet">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script src="https://cdn.bootcss.com/template_js/0.7.1-1/template.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<style>
+        .layui-m-layercont { padding: 0.53rem; }
+        .layui-m-layermain:before {
+            content: '';
+            display: block;
+            background-color: #ffffff;
+            position: absolute;
+            right: 0.6rem;
+            top: -2.3rem;
+            width:0;
+            height:0;
+            border-right:0.2rem solid #4C4C4C;
+            border-left:0.2rem solid #4C4C4C;
+            border-bottom:0.2rem solid #ffffff;
+        }
+    </style>
+<body>
+        <div id="navi_top">
+                <table id="navi_message">
+                    <tr>
+                        <td><img class="nav_add_icon" src="../resource/test/add_left.png"></td>
+                        <td><p class="navi_center_text">添加</p></td>
+                        <td><img class="nav_add_addition" src="../resource/test/add.png"></td>
+                    </tr>
+                </table>
+        
+               
+            </div>
+
+            <div id="contacter_list" style="">
+                    <div id="friend_group_button">
+                        <div class="button_div">
+                            <div id="friend_button" class="contacter_button_HL">好友</div>
+                            <div id="group_button" class="">群聊</div>
+                        </div>
+                    </div>
+            
+                    <div id="contacter_friend_list" style="">
+                        <div class="message_group" data-field="friend" data-friend_id="1">
+                            <div class="add_search">
+                                <img class="add_img" src="../resource/test/add_input.png" alt="">
+                                <input class="add_input" type="text" placeholder="搜索qq账号">
+
+                            </div>
+                           
+                        </div>
+            
+                     
+                            
+                    </div>
+                    <div id="contacter_group_list" style="display: none;">
+                            <div class="message_group" data-field="friend" data-friend_id="2">
+                                    <div class="add_search">
+                                        <img class="add_img" src="../resource/test/add_input.png" alt="">
+                                        <input class="add_input" type="text" placeholder="搜索群号/群名称">
+            
+                                    </div>
+                            </div>
+                        </div>
+            
+                
+            </div>
+
+   
+    
+</body>
+<script src="../js/message.js"></script>
+
+</html>
